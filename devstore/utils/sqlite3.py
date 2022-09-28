@@ -3,8 +3,8 @@ import sqlite3
 
 class Database(object):
     """Sqlite3 database class"""
-    DB_PATH = "./data/devstore.db"
-    BUILD_PATH = "./data/devstore.sql"
+    DB_PATH = "./devstore/data/devstore.sqlite"
+    BUILD_PATH = "./devstore/data/devstore.sql"
 
     def __init__(self):
         self.__dbcon = sqlite3.connect(self.DB_PATH)

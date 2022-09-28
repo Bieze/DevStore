@@ -61,6 +61,14 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "pastel"
+version = "0.2.1"
+description = "Bring colors to your terminal."
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
 name = "pefile"
 version = "2022.5.30"
 description = "Python PE parsing module"
@@ -70,6 +78,21 @@ python-versions = ">=3.6.0"
 
 [package.dependencies]
 future = "*"
+
+[[package]]
+name = "poethepoet"
+version = "0.16.2"
+description = "A task runner that works well with poetry."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+pastel = ">=0.2.1,<0.3.0"
+tomli = ">=1.2.2"
+
+[package.extras]
+poetry_plugin = ["poetry (>=1.0,<2.0)"]
 
 [[package]]
 name = "pycodestyle"
@@ -122,10 +145,18 @@ category = "dev"
 optional = false
 python-versions = "*"
 
+[[package]]
+name = "tomli"
+version = "2.0.1"
+description = "A lil' TOML parser"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "d70166c243ab55ef8abd752a605c4da767dbd3e903d90ce5e91b028322c8e17c"
+content-hash = "46bd95488445ee780a680e0ba103c5fd6035621478278733650515daa57dc202"
 
 [metadata.files]
 altgraph = []
@@ -134,9 +165,12 @@ future = []
 isort = []
 macholib = []
 mccabe = []
+pastel = []
 pefile = []
+poethepoet = []
 pycodestyle = []
 pyflakes = []
 pyinstaller = []
 pyinstaller-hooks-contrib = []
 pywin32-ctypes = []
+tomli = []
