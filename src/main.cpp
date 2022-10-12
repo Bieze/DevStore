@@ -2,11 +2,11 @@
 #include <string>
 #include "config.h"
 #include <iostream>
-#include "include/sqlite3.h"
-#include "include/delKey.hpp"
-#include "include/checks.hpp"
-#include "include/addKey.hpp"
-#include "include/listKeys.hpp"
+#include "cli/sqlite3.h"
+#include "cli/delKey.hpp"
+#include "cli/checks.hpp"
+#include "cli/addKey.hpp"
+#include "cli/listKeys.hpp"
 #include <boost/program_options.hpp>
 
 using namespace std;
@@ -14,14 +14,14 @@ namespace po = boost::program_options;
 
 int main(int argc, char *argv[]) 
 {   
-    mainChecks();
 
+    mainChecks();
     sqlite3 *db;
     sqlite3_stmt * stmt;
     char* zErrMsg = 0;
     int rc;
 
-    rc = sqlite3_open("db/keys.sqlite", &db);
+    rc = sqlite3_open(keys, &db);
     string project_name = string(PROJECT_NAME);
     string project_ver = string(PROJECT_VER);
     string project_hash = string(GIT_HASH);

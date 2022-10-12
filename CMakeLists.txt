@@ -2,6 +2,17 @@ cmake_minimum_required(VERSION 3.10)
 
 project(DevStore VERSION 0.1.1)
 
+if (WIN32)
+    file(TO_CMAKE_PATH "$ENV{USERPROFILE}" USERPROFILE)
+    set(devhome "${USERPROFILE}/.devstore")
+    set(dbpath "${USERPROFILE}/.devstore/db")
+    set(keypath "${USERPROFILE}/.devstore/db/keys.sqlite")
+elseif(UNIX)
+    set(devhome "$ENV{HOME}/.devstore")
+    set(dbpath "$ENV{HOME}/.devstore/db")
+    set(keypath "$ENV{HOME}/.devstore/db/keys.sqlite")
+endif()
+
 execute_process(
     COMMAND git log -1 --format=%h
     WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
@@ -30,7 +41,7 @@ find_package(Boost 1.80.0 COMPONENTS program_options)
 
 include_directories(
     ${PROJECT_SOURCE_DIR}/src/include/
-    ${PROJECT_SOURCE_DIR}/sql
+    ${PROJECT_SOURCE_DIR}/src/
     ${Boost_INCLUDE_DIRS}
 )
 
@@ -40,12 +51,12 @@ configure_file(
 )
 
 add_executable(
-    DevStore
+    devstore
     ${PROJECT_SOURCE_DIR}/src/main.cpp
 )
 
 target_link_libraries(
-    DevStore
+    devstore
     ${PROJECT_SOURCE_DIR}/src/libs/sqlite3.o
     Boost::program_options
 )

@@ -4,4 +4,20 @@
 #define PROJECT_VER_MINOR "@PROJECT_VERSION_MINOR@"
 #define PROJECT_VER_PATCH "@PROJECT_VERSION_PATCH@"
 
+/*
+devhome: The home of the .devstore directory
+For windows this can be C:\\Users\\user\\.devstore
+For Linux and mac this can be ~/.devstore
+
+The dbpath is the path to the database folder
+For windows \\db
+For Linux /db
+*/
+
+#ifndef GLOBALS_H
+#define GLOBALS_H
 const char *GIT_HASH = "@GIT_HASH@";
+inline const char *devhome = "@devhome@";
+inline const char *dbpath = "@dbpath@";
+inline const char *keys = "@keypath@";
+#endif

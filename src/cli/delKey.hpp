@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
-#include <sqlite3.h>
+#include "config.h"
+#include "sqlite3.h"
 #include "callback.hpp"
+
 
 using namespace std;
 
@@ -11,11 +13,11 @@ int delKey(string path) {
     char* zErrMsg = 0;
     int rc;
 
-    rc = sqlite3_open("db/keys.sqlite", &db);
+    rc = sqlite3_open(keys, &db);
 
     cout << path;
     string delKeyStatement = 
-        "DELETE FROM keys WHERE path = "
+        "DELETE FROM keys WHERE Path = "
         + string("'") + path + string("');");
     rc = sqlite3_exec(db, delKeyStatement.c_str(), callback, 0, &zErrMsg);
 
@@ -23,7 +25,7 @@ int delKey(string path) {
         cout << "Error: " << zErrMsg << endl;
         sqlite3_free(zErrMsg);
     } else {
-        cout << "Deleted file: " << path << " from database";
+        cout << "Deleted file from database: " << path << " from database";
     }
 
     sqlite3_close(db);
