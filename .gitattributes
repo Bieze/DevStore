@@ -1,6 +1,7 @@
-# Set the default behavior for all files.
 * text=auto eol=lf
 
-# Normalized and converts to native line endings on checkout.
-*.py text
-*.pyx text
+*.cpp text
+*.hpp text
+*.c text
+*.h text
+*.h.in text

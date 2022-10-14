@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(DevStore VERSION 0.1.1)
+project(DevStore VERSION 0.1.2)
 
 if (WIN32)
     file(TO_CMAKE_PATH "$ENV{USERPROFILE}" USERPROFILE)
