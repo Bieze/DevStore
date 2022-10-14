@@ -43,18 +43,29 @@ yum install boost-devel
 
 ## How to compile the full program
 
+* For the stable version
 
 ```bash
 git clone https://abdulhani.com/git/DevStore.git
 cd DevStore
 
-mkdir src/libs
-gcc -c src/cli/sqlite3.c -o src/libs/sqlite3.o
+mkdir build && cd build
+cmake ..
+make
+```
+
+* For the latest (Might not compile)
+
+```bash
+git clone https://abdulhani.com/git/DevStore.git
+cd DevStore
+git checkout devel
 
 mkdir build && cd build
 cmake ..
 make
 ```
+
 
 ## Usage and help
 DevStore:
@@ -94,7 +105,7 @@ devstore --del-key [key-path] # The key path is the same as what's written in wh
 ## Ideas I might add
 | Idea              | Usage                             | Will I add it ?       |
 | :---              | :----:                            |   ---:                |
-| Python installer  | Installs latest version of Python | Yes                   |
+| Python installer  | Installs latest version of Python | No                    |
 | .NET Components   | Fetches .NET version              | Unsure                |
 
 

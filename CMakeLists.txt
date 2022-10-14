@@ -30,7 +30,6 @@ add_custom_target(AlwaysCheckGit COMMAND ${CMAKE_COMMAND}
 )
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_COMPILER g++)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(Boost_USE_STATIC_LIBS OFF) 
@@ -59,7 +58,6 @@ add_executable(
 
 target_link_libraries(
     devstore
-    ${PROJECT_SOURCE_DIR}/src/libs/sqlite3.o
     ${SQLite3_LIBRARIES}
     Boost::program_options
 )
