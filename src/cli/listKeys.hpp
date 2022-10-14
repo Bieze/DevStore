@@ -1,7 +1,8 @@
 #include <string>
 #include <iostream>
 #include "config.h"
-#include "sqlite3.h"
+#include <sqlite3.h>
+
 #include "callback.hpp"
 
 using namespace std;

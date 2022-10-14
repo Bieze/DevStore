@@ -1,7 +1,7 @@
 #include <string>
 #include <cctype>
 #include <iostream>
-#include "sqlite3.h"
+#include <sqlite3.h>
 #include "config.h"
 
 using namespace std;

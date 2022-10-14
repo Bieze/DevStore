@@ -41,20 +41,15 @@ yum install boost
 yum install boost-devel
 ```
 
-
-## How to compile sqlite3
-
-```bash
-mkdir src/libs
-gcc -c ./src/include/sqlite3.c -o ./src/libs/sqlite3.o
-```
-
 ## How to compile the full program
 
+
 ```bash
-# Compile sqlite3 if you haven't already.
 git clone https://abdulhani.com/git/DevStore.git
 cd DevStore
+
+mkdir src/libs
+gcc -c src/cli/sqlite3.c -o src/libs/sqlite3.o
 
 mkdir build && cd build
 cmake ..

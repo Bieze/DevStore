@@ -37,12 +37,14 @@ set(Boost_USE_STATIC_LIBS OFF)
 set(Boost_USE_MULTITHREADED ON)  
 set(Boost_USE_STATIC_RUNTIME OFF) 
 
-find_package(Boost 1.80.0 COMPONENTS program_options)
+find_package(Boost 1.74.0 COMPONENTS program_options)
+find_package(SQLite3)
 
 include_directories(
     ${PROJECT_SOURCE_DIR}/src/include/
     ${PROJECT_SOURCE_DIR}/src/
     ${Boost_INCLUDE_DIRS}
+    ${SQLite3_INCLUDE_DIRS}
 )
 
 configure_file(
@@ -58,5 +60,6 @@ add_executable(
 target_link_libraries(
     devstore
     ${PROJECT_SOURCE_DIR}/src/libs/sqlite3.o
+    ${SQLite3_LIBRARIES}
     Boost::program_options
 )

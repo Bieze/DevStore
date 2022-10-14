@@ -2,7 +2,7 @@
 #include <string>
 #include "config.h"
 #include <iostream>
-#include "cli/sqlite3.h"
+#include <sqlite3.h>
 #include "cli/delKey.hpp"
 #include "cli/checks.hpp"
 #include "cli/addKey.hpp"
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
             ("version,v", "Display the version number")
             ("add-key", "Add a new key to the database")
             ("list-keys", "List all the keys in the database")
-            ("del-key", po::value<string>()->required(), "Takes key path as an argument, it has to be the same as in the database, to find out what it is run devstore --list-keys")
+            ("del-key", po::value<string>()->required()->value_name("KEY-PATH"), "Takes key path as an argument, it has to be the same as in the database, to find out what it is run devstore --list-keys")
 
         ;
 
