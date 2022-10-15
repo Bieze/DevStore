@@ -88,14 +88,6 @@ sudo mv devstore /usr/bin
 
 
 ## Usage and help
-DevStore:
-  -h [ --help ]         Display this help message
-  -v [ --version ]      Display the version number
-  --add-key             Add a new key to the database
-  --list-keys           List all the keys in the database
-  --del-key arg         Takes key path as an argument, it has to be the same as
-                        in the database, to find out what it is run devstore
-                        --list-keys
 
 ```bash
 # Help command
