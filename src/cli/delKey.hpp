@@ -18,7 +18,7 @@ int delKey(string path) {
     cout << path;
     string delKeyStatement = 
         "DELETE FROM keys WHERE Path = "
-        + string("'") + path + string("');");
+        + string("'") + path + string("';");
     rc = sqlite3_exec(db, delKeyStatement.c_str(), callback, 0, &zErrMsg);
 
     if ( rc !=SQLITE_OK ) {
