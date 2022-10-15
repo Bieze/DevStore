@@ -50,7 +50,13 @@ git clone https://abdulhani.com/git/DevStore.git
 cd DevStore
 
 mkdir build && cd build
+
+# Linux
 cmake ..
+
+# Windows
+cmake .. -G "MinGW Makefiles"
+
 make
 ```
 
@@ -62,7 +68,13 @@ cd DevStore
 git checkout devel
 
 mkdir build && cd build
+
+# Linux
 cmake ..
+
+# Windows
+cmake .. -G "MinGW Makefiles"
+
 make
 ```
 
