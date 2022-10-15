@@ -78,6 +78,14 @@ cmake .. -G "MinGW Makefiles"
 make
 ```
 
+## The finisher
+
+```bash
+# Installing on Linux
+cd build
+sudo mv devstore /usr/bin
+```
+
 
 ## Usage and help
 DevStore:
