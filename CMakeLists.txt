@@ -40,7 +40,7 @@ find_package(Boost 1.74.0 COMPONENTS program_options)
 find_package(SQLite3)
 
 include_directories(
-    ${PROJECT_SOURCE_DIR}/src/include/
+    ${PROJECT_SOURCE_DIR}/src/cli/
     ${PROJECT_SOURCE_DIR}/src/
     ${Boost_INCLUDE_DIRS}
     ${SQLite3_INCLUDE_DIRS}

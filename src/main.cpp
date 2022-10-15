@@ -2,10 +2,10 @@
 #include "config.h"
 #include <iostream>
 #include <sqlite3.h>
-#include "cli/delKey.hpp"
-#include "cli/checks.hpp"
-#include "cli/addKey.hpp"
-#include "cli/listKeys.hpp"
+#include <delKey.hpp>
+#include <listKeys.hpp>
+#include <addKey.hpp>
+#include <checks.hpp>
 #include <boost/program_options.hpp>
 
 using namespace std;
