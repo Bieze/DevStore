@@ -46,7 +46,7 @@ yum install boost-devel
 * For the stable version
 
 ```bash
-git clone https://abdulhani.com/git/DevStore.git
+git clone https://github.com/abdulh4ni/DevStore.git
 cd DevStore
 
 mkdir build && cd build
@@ -63,7 +63,7 @@ make
 * For the latest (Might not compile)
 
 ```bash
-git clone https://abdulhani.com/git/DevStore.git
+git clone https://github.com/abdulh4ni/DevStore.git
 cd DevStore
 git checkout devel
 

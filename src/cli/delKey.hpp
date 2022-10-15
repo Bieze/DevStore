@@ -25,7 +25,7 @@ int delKey(string path) {
         cout << "Error: " << zErrMsg << endl;
         sqlite3_free(zErrMsg);
     } else {
-        cout << "Deleted file from database: " << path << " from database";
+        cout << "Deleted file from database: " << path << endl;
     }
 
     sqlite3_close(db);
